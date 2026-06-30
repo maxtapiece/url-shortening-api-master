@@ -130,6 +130,19 @@ function normalizeURL(url) {
   return url;
 }
 
+function isValidURL(url) {
+  try {
+    const parsedURL = new URL(url);
+
+    return (
+      (parsedURL.protocol === "http:" || parsedURL.protocol === "https:") &&
+      parsedURL.hostname.includes(".")
+    );
+  } catch {
+    return false;
+  }
+}
+
 // =========================
 // EVENT HANDLERS
 // =========================
@@ -145,6 +158,11 @@ async function handleSubmit(event) {
   }
 
   url = normalizeURL(url);
+
+  if (!isValidURL(url)) {
+    showError("Please enter a valid URL");
+    return;
+  }
 
   const existingLink = app.links.find((link) => link.original === url);
 
@@ -170,7 +188,6 @@ async function handleSubmit(event) {
     };
 
     app.links.unshift(newLink);
-
     urlInput.value = "";
 
     saveLinks();
