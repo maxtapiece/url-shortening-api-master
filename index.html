@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Shortly URL Shortening API Challenge</title>
+  </head>
+
+  <body>
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#" class="logo-link" aria-label="Shortly home">
+          <img src="./images/logo.svg" alt="Shortly" class="logo" />
+        </a>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#resources">Resources</a></li>
+          </ul>
+
+          <div class="account-actions">
+            <a href="#" class="login-link">Login</a>
+            <a href="#" class="btn btn-small">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- =========================
+           HERO SECTION
+      ========================== -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>More than just shorter links</h1>
+
+          <p>
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+
+          <a href="#shortener" class="btn">Get Started</a>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="./images/illustration-working.svg"
+            alt="Person working at a desk"
+          />
+        </div>
+      </section>
+
+      <!-- =========================
+           SHORTENER SECTION
+      ========================== -->
+      <section class="shortener-section" id="shortener">
+        <form class="shortener-form" novalidate>
+          <div class="input-group">
+            <label for="url-input" class="sr-only">Enter URL to shorten</label>
+
+            <input
+              type="url"
+              id="url-input"
+              class="url-input"
+              placeholder="Shorten a link here..."
+            />
+
+            <p class="error-message" id="url-error">Please add a link</p>
+          </div>
+
+          <button type="submit" class="btn shorten-btn">Shorten It!</button>
+        </form>
+
+        <!-- Shortened links will be rendered here with JavaScript -->
+        <div class="links-list" id="links-list"></div>
+      </section>
+
+      <!-- =========================
+           STATISTICS SECTION
+      ========================== -->
+      <section class="statistics" id="features">
+        <div class="section-heading">
+          <h2>Advanced Statistics</h2>
+
+          <p>
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </div>
+
+        <div class="statistics-cards">
+          <article class="stats-card">
+            <div class="stats-icon">
+              <img src="./images/icon-brand-recognition.svg" alt="" />
+            </div>
+
+            <h3>Brand Recognition</h3>
+
+            <p>
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </article>
+
+          <article class="stats-card">
+            <div class="stats-icon">
+              <img src="./images/icon-detailed-records.svg" alt="" />
+            </div>
+
+            <h3>Detailed Records</h3>
+
+            <p>
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </article>
+
+          <article class="stats-card">
+            <div class="stats-icon">
+              <img src="./images/icon-fully-customizable.svg" alt="" />
+            </div>
+
+            <h3>Fully Customizable</h3>
+
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- =========================
+           BOOST CTA SECTION
+      ========================== -->
+      <section class="boost">
+        <h2>Boost your links today</h2>
+        <a href="#shortener" class="btn">Get Started</a>
+      </section>
+    </main>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a href="#" class="footer-logo-link" aria-label="Shortly home">
+          <img src="./images/logo.svg" alt="Shortly" class="footer-logo" />
+        </a>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-column">
+            <h3>Features</h3>
+            <ul>
+              <li><a href="#">Link Shortening</a></li>
+              <li><a href="#">Branded Links</a></li>
+              <li><a href="#">Analytics</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul class="social-links" aria-label="Social links">
+          <li>
+            <a href="#" aria-label="Facebook">
+              <img src="./images/icon-facebook.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Twitter">
+              <img src="./images/icon-twitter.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Pinterest">
+              <img src="./images/icon-pinterest.svg" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Instagram">
+              <img src="./images/icon-instagram.svg" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">
+          Frontend Mentor </a
+        >. Coded by
+        <a
+          href="https://maxtapiece.github.io/my-portfolio-webbsite"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Osarumwense Nathan Monday </a
+        >.
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
